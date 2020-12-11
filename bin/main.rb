@@ -25,9 +25,9 @@ puts 'The line can horizontal, vertical or diagonal.'
 puts ''
 
 p 'Player X select your move:'
-move = gets.chomp.to_i
+gets.chomp.to_i
 puts 'You have selected an invalid input. Please choose a number between 1 and 9. Please try again'
-move = gets.chomp.to_i
+gets.chomp.to_i
 puts 'You have selected position 1. Now your move is displayed on the board.'
 puts ''
 puts ' X |   |   '
@@ -37,7 +37,7 @@ puts '---+---+---'
 puts '   |   |   '
 puts ''
 puts 'It\'s Player 0\'s turn. Please select your move:'
-move = gets.chomp.to_i
+gets.chomp.to_i
 puts 'You have selected position 2. Now your move is displayed on the board.'
 puts ''
 puts ' X | O |   '
@@ -47,7 +47,7 @@ puts '---+---+---'
 puts '   |   |   '
 puts ''
 puts 'It\'s Player X\'s turn. Please select your move:'
-move = gets.chomp.to_i
+gets.chomp.to_i
 puts 'You have selected position 5. Now your move is displayed on the board.'
 puts ''
 puts ' X | O |   '
@@ -57,7 +57,7 @@ puts '---+---+---'
 puts '   |   |   '
 puts ''
 puts 'It\'s Player 0\'s turn. Please select your move:'
-move = gets.chomp.to_i
+gets.chomp.to_i
 puts 'You have selected position 7. Now your move is displayed on the board.'
 puts ''
 puts ' X | O |   '
@@ -67,7 +67,7 @@ puts '---+---+---'
 puts ' O |   |   '
 puts ''
 puts 'It\'s Player X\'s turn. Please select your move:'
-move = gets.chomp.to_i
+gets.chomp.to_i
 puts 'You have selected position 9. Now your move is displayed on the board.'
 puts ''
 puts ' X | O |   '
@@ -77,7 +77,7 @@ puts '---+---+---'
 puts ' O |   | X '
 puts ''
 
-#End of Game. Show Game Result
+# End of Game. Show Game Result
 puts 'There are no more moves available. This is a draw.'
 puts ''
 puts 'Congratulations, Player X! You have made a straight line. You won.'
