@@ -13,15 +13,14 @@ def board(arr)
 end
 
 puts 'Tic Tac Toe'
-arr = Array.new(10)
 Instructions.show_instructions
 player = 'X'
-game = Game.new()
+game = Game.new
 
 while game.win.nil?
   p "Player #{player} select your move:"
   move = gets.chomp.to_i
-  p game.turn(move,player)
+  p game.turn(move, player)
   player = player == 'X' ? 'O' : 'X'
   board(game.see_game)
 end
