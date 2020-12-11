@@ -2,13 +2,28 @@ class Game
     attr_accessor :game
     attr_reader :winner
     @@winner = nil
+    @@game = Array.new(10)
+    @@game[0] = 'test'
 
-    def initialize
-        @@game = Array.new(10)
+    def see_game
+        return @@game
     end
+    
     def turn(move,player)
-        @@game[move] = player
-        win
+        if !move.is_a?(Integer)
+            return "Please, choose a number"
+        elsif move > 9 && move <= 0
+            return "error!, select a number inside 1 to 9"
+        elsif !@@game[move].nil?
+            return "error!, that position is already taken"
+        else
+            @@game[move] = player
+            return "You have selected position #{move}. Now your move is displayed on the board."
+        end
+    end
+
+    def print_winner
+        return @@winner == 'draw' ? 'It\'s a draw' : "Congrats, the winner is #{@@winner}"
     end
 
     def win
@@ -28,8 +43,8 @@ class Game
             @@winner = @@game[1]
         elsif @@game[3] == @@game[5] && @@game[5] == @@game[7]
             @@winner = @@game[3]
-        else
-            return nil
+        elsif @@game.all?
+            @@winner = 'draw'
         end
     end
 
