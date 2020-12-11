@@ -4,9 +4,11 @@ class Game
   attr_accessor :game
   attr_reader :winner
 
-  @winner = nil
-  @game = Array.new(10)
-  @game[0] = 'test'
+  def initialize
+    @winner = nil
+    @game = Array.new(10)
+    @game[0] = 'empty'
+  end
 
   def see_game
     @game
