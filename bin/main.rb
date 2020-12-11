@@ -18,7 +18,7 @@ player = 'X'
 game = Game.new
 
 while game.win.nil?
-  p "Player #{player} select your move:"
+  p "Player #{player}, please select your move:"
   move = gets.chomp.to_i
   p game.turn(move, player)
   player = player == 'X' ? 'O' : 'X'
