@@ -17,35 +17,27 @@ p 'Read instructions?'
 
 start = 'yes'
 arr = Array.new(10)
+
 while start == 'yes'
   val = gets.chomp.to_s.downcase
   if val == 'yes'
-    # Instructions.show_instructions()
-    puts 'Welcome to Tic Tac Toe. This is the classic game where you have to mark with an X or
-    0 your position in the board.'
-    puts 'To play, each player will have to select a position in the grid by choosing a number from 1 to 9.'
-    puts 'Each number corresponds to one of the positions in the grid. You can choose any position that is empty.'
-    puts 'The first player to make a line of three consecutive marks wins the game.'
-    puts 'The line can horizontal, vertical or diagonal.'
+    Instructions.show_instructions
   end
 
   player = 'X'
-  # game = Game.new()
-  game = true
+  game = Game.new()
 
-  # while game.win.nil? || game.any?
-  while game
+  while game.win.nil? || game.game.all?
     p "Player #{player} select your move:"
     move = gets.chomp.to_i
     puts "You have selected position #{move}. Now your move is displayed on the board."
-    arr[move] = player
-    # game.turn(player,move)
+    game.turn(move,player)
     player = player == 'X' ? 'O' : 'X'
-    game = false
-    board(arr)
+    p game.game
+    board(game.game)
   end
 
-  # game.win.nil ? 'It\'s a draw' : 'Congrats, the winner is #{game.win}'
+  game.win.nil ? 'It\'s a draw' : 'Congrats, the winner is #{game.winner}'
 
   p 'Start again?'
   start = gets.chomp.to_s.downcase
