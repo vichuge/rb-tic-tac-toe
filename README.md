@@ -21,7 +21,7 @@ The line can horizontal, vertical or diagonal.
 
 The player who makes a straight line with 3 marks wins!
 
-![screenshot](./img/examples.png)
+![screenshot](./img/howtowin.png)
 
 ## Instructions
 
