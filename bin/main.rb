@@ -13,42 +13,80 @@ def board(arr)
 end
 
 puts 'Tic Tac Toe'
-p 'Read instructions?'
 
-start = 'yes'
-arr = Array.new(10)
-while start == 'yes'
-  val = gets.chomp.to_s.downcase
-  if val == 'yes'
-    # Instructions.show_instructions()
-    puts 'Welcome to Tic Tac Toe. This is the classic game where you have to mark with an X or
-    0 your position in the board.'
-    puts 'To play, each player will have to select a position in the grid by choosing a number from 1 to 9.'
-    puts 'Each number corresponds to one of the positions in the grid. You can choose any position that is empty.'
-    puts 'The first player to make a line of three consecutive marks wins the game.'
-    puts 'The line can horizontal, vertical or diagonal.'
-  end
+# Instructions.show_instructions()
+puts 'Welcome to Tic Tac Toe. This is the classic game where you have to mark with an X or
+0 your position in the board.'
+puts ''
+puts 'To play, each player will have to select a position in the grid by choosing a number from 1 to 9.'
+puts 'Each number corresponds to one of the positions in the grid. You can choose any position that is empty.'
+puts 'The first player to make a line of three consecutive marks wins the game.'
+puts 'The line can horizontal, vertical or diagonal.'
+puts ''
 
-  player = 'X'
-  # game = Game.new()
-  game = true
+p 'Player X select your move:'
+move = gets.chomp.to_i
+puts 'You have selected an invalid input. Please choose a number between 1 and 9. Please try again'
+move = gets.chomp.to_i
+puts 'You have selected position 1. Now your move is displayed on the board.'
+puts ''
+puts ' X |   |   '
+puts '---+---+---'
+puts '   |   |   '
+puts '---+---+---'
+puts '   |   |   '
+puts ''
+puts 'It\'s Player 0\'s turn. Please select your move:'
+move = gets.chomp.to_i
+puts 'You have selected position 2. Now your move is displayed on the board.'
+puts ''
+puts ' X | O |   '
+puts '---+---+---'
+puts '   |   |   '
+puts '---+---+---'
+puts '   |   |   '
+puts ''
+puts 'It\'s Player X\'s turn. Please select your move:'
+move = gets.chomp.to_i
+puts 'You have selected position 5. Now your move is displayed on the board.'
+puts ''
+puts ' X | O |   '
+puts '---+---+---'
+puts '   | X |   '
+puts '---+---+---'
+puts '   |   |   '
+puts ''
+puts 'It\'s Player 0\'s turn. Please select your move:'
+move = gets.chomp.to_i
+puts 'You have selected position 7. Now your move is displayed on the board.'
+puts ''
+puts ' X | O |   '
+puts '---+---+---'
+puts '   | X |   '
+puts '---+---+---'
+puts ' O |   |   '
+puts ''
+puts 'It\'s Player X\'s turn. Please select your move:'
+move = gets.chomp.to_i
+puts 'You have selected position 9. Now your move is displayed on the board.'
+puts ''
+puts ' X | O |   '
+puts '---+---+---'
+puts '   | X |   '
+puts '---+---+---'
+puts ' O |   | X '
+puts ''
 
-  # while game.win.nil? || game.any?
-  while game
-    p "Player #{player} select your move:"
-    move = gets.chomp.to_i
-    puts "You have selected position #{move}. Now your move is displayed on the board."
-    arr[move] = player
-    # game.turn(player,move)
-    player = player == 'X' ? 'O' : 'X'
-    game = false
-    board(arr)
-  end
-
-  # game.win.nil ? 'It\'s a draw' : 'Congrats, the winner is #{game.win}'
-
-  p 'Start again?'
-  start = gets.chomp.to_s.downcase
-end
+#End of Game. Show Game Result
+puts 'There are no more moves available. This is a draw.'
+puts ''
+puts 'Congratulations, Player X! You have made a straight line. You won.'
+puts ''
+puts ' X | O | O '
+puts '---+---+---'
+puts ' O | X | O '
+puts '---+---+---'
+puts ' X | O | X '
+puts ''
 
 # rubocop: enable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity
