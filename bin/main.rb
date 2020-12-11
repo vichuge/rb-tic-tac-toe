@@ -14,14 +14,12 @@ end
 
 puts 'Tic Tac Toe'
 Instructions.show_instructions
-player = 'X'
 game = Game.new
 
 while game.winner.nil?
-  p "Player #{player}, please select your move:"
+  p "Player #{game.player}, please select your move:"
   move = gets.chomp.to_i
-  p game.turn(move, player)
-  player = player == 'X' ? 'O' : 'X'
+  p game.turn(move, game.player)
   board(game.see_game)
 end
 

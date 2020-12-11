@@ -2,12 +2,13 @@
 
 class Game
   attr_accessor :game
-  attr_reader :winner
+  attr_reader :winner, :player
 
   def initialize
     @winner = nil
     @game = Array.new(10)
     @game[0] = 'empty'
+    @player = 'X'
   end
 
   def see_game
@@ -15,17 +16,21 @@ class Game
   end
 
   def turn(move, player)
-    if !move.is_a?(Integer)
-      'Please, choose a number'
-    elsif move > 9 && move <= 0
+    p move
+    if move > 9 || move <= 0
       'error!, select a number inside 1 to 9'
     elsif !@game[move].nil?
       'error!, that position is already taken'
     else
       @game[move] = player
       win
+      change_turn
       "You have selected position #{move}. Now your move is displayed on the board."
     end
+  end
+
+  def change_turn
+    @player = @player == 'X' ? 'O' : 'X'
   end
 
   def print_winner
