@@ -1,4 +1,4 @@
-# rubocop: disable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity
+# rubocop: disable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Metrics/AbcSize
 
 class Game
   attr_accessor :game
@@ -23,6 +23,7 @@ class Game
       'error!, that position is already taken'
     else
       @game[move] = player
+      win
       "You have selected position #{move}. Now your move is displayed on the board."
     end
   end
@@ -54,4 +55,4 @@ class Game
   end
 end
 
-# rubocop: enable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity
+# rubocop: enable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Metrics/AbcSize
