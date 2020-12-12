@@ -6,6 +6,7 @@
 
 🎮
 **This project was build with ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x64-mingw32] and ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-darwin15]**
+
 The game is loaded and played entirely on the command prompt/terminal of your computer system. Kindly follow the instructions below to play it. 🙂
 
 ## Built With
