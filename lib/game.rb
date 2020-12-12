@@ -16,16 +16,15 @@ class Game
   end
 
   def turn(move, player)
-    p move
     if move > 9 || move <= 0
-      'error!, select a number inside 1 to 9'
+      'error! Please select any number from 1 to 9' "\n\n"
     elsif !@game[move].nil?
-      'error!, that position is already taken'
+      'error! That position is already taken' "\n\n"
     else
       @game[move] = player
       win
       change_turn
-      "You have selected position #{move}. Now your move is displayed on the board."
+      "\nYou have selected position #{move}. Now your move is displayed on the board.\n\n"
     end
   end
 
@@ -34,7 +33,7 @@ class Game
   end
 
   def print_winner
-    @winner == 'draw' ? 'It\'s a draw' : "Congrats, the winner is #{@winner}"
+    @winner == 'draw' ? 'It\'s a draw!' : "Congrats, the winner is #{@winner}"
   end
 
   def win
