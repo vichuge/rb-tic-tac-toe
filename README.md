@@ -42,6 +42,10 @@ The player who makes a straight line with 3 marks wins!
 8. In case the game doesn't load, type `ruby bin/main.rb`
 9. Play the game!
 
+## Live Demo
+
+- Repl live demo: [Link](https://repl.it/@StarSheriff2/Tic-Tac-Toe#main.rb)
+
 ## Authors
 
 👤 **Victor Pacheco**
