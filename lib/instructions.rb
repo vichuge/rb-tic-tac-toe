@@ -14,7 +14,6 @@ class Instructions
     To play, each player will have to select a position in the grid by choosing a number from 1 to 9.
     Each number corresponds to one of the positions in the grid. You can choose any position that is empty.
     The first player to make a line of three consecutive marks wins the game.
-    The line can be horizontal, vertical or diagonal.
-    "
+    The line can be horizontal, vertical or diagonal."
   end
 end
