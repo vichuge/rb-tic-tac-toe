@@ -2,7 +2,7 @@
 
 # Tic tac toe
 
-> In this project, the student builds a Tic Tac Toe game. The main goal is to put into practice the main concepts of Object Oriented Programming. Particularly, classes and access to their attributes.
+> In this project, the student builds a Tic Tac Toe game. The main goal is to put into practice the main concepts of Object-Oriented Programming. Particularly, classes and access to their attributes.
 
 **This project was build with ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x64-mingw32] and ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-darwin15]**
 
@@ -21,13 +21,13 @@ The line can horizontal, vertical or diagonal.
 
 The player who makes a straight line with 3 marks wins!
 
-![screenshot](./img/howtowin.png)
+![How to win](./img/howtowin.png)
 
 ## Instructions
 
 - Clone the repository.
-- Open Vscode and run the index file in the terminal with the command [ruby index.rb].
-- feel free to change the values in the array to check the functionality.
+- Open Vscode and run the main file in the terminal with the command [ruby bin/main.rb].
+- Play the game!
 
 ## Authors
 
