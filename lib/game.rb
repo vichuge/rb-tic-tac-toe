@@ -17,9 +17,9 @@ class Game
 
   def turn(move, player)
     if move > 9 || move <= 0
-      'error! Please select any number from 1 to 9' "\n"
+      "error! Please select any number from 1 to 9\n"
     elsif !@game[move].nil?
-      'error! That position is already taken' "\n"
+      "error! That position is already taken\n"
     else
       @game[move] = player
       win
