@@ -1,5 +1,3 @@
-# rubocop: disable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Metrics/AbcSize
-
 class Game
   attr_accessor :game, :name, :players, :player_turn
   attr_reader :winner
@@ -52,5 +50,3 @@ class Game
     end
   end
 end
-
-# rubocop: enable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Metrics/AbcSize
