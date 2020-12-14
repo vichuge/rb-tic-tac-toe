@@ -21,7 +21,8 @@ class Game
       "error! That position is already taken\n"
     else
       @game[move] = player.symbol
-      win(player.name)
+      player.moves.push(move)
+      win(player.moves, player.name)
       change_turn
       "\n#{player.name}, you selected position #{move}. Now your move is displayed on the board.\n"
     end
@@ -35,18 +36,13 @@ class Game
     @winner == 'draw' ? 'It\'s a draw!' : "Congrats, #{@winner}! You won this match!"
   end
 
-  def win(player)
-    if @game[1] && @game[1] == @game[2] && @game[2] == @game[3] ||
-       @game[4] && @game[4] == @game[5] && @game[5] == @game[6] ||
-       @game[7] && @game[7] == @game[8] && @game[8] == @game[9] ||
-       @game[1] && @game[1] == @game[4] && @game[4] == @game[7] ||
-       @game[2] && @game[2] == @game[5] && @game[5] == @game[8] ||
-       @game[3] && @game[3] == @game[6] && @game[6] == @game[9] ||
-       @game[1] && @game[1] == @game[5] && @game[5] == @game[9] ||
-       @game[3] && @game[3] == @game[5] && @game[5] == @game[7]
-      @winner = player
-    elsif @game.all?
-      @winner = 'draw'
+  def win(moves, player)
+    if moves.length > 2
+      combinations = moves.combination(3).to_a
+      combinations = combinations.select { |el| el[1] > el[0] && el[1] < el[2] }
+      return @winner = player unless (combinations & [[1, 2, 3], [7, 8, 9], [1, 4, 7], [3, 6, 9],
+                                                      [4, 5, 6], [2, 5, 8], [1, 5, 9], [3, 5, 7]]).empty?
     end
+    @winner = 'draw' if @game.all?
   end
 end
