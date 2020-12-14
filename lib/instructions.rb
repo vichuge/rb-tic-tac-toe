@@ -16,6 +16,7 @@ class Instructions
     You select your move by typing the number that corresponds to the position you wish to mark.
 
     The first player to make a line of three consecutive marks wins the game.
-    The line can be horizontal, vertical or diagonal."
+    The line can be horizontal, vertical or diagonal.
+    "
   end
 end

@@ -44,7 +44,7 @@ The player who makes a straight line with 3 marks wins!
 
 ## Live Demo
 
-- Repl live demo: [Link](https://repl.it/@StarSheriff2/Tic-Tac-Toe#main.rb)
+- Repl live demo: [Link](https://repl.it/@StarSheriff2/Tic-Tac-Toe-Ruby-Project)
 
 ## Authors
 
