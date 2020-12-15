@@ -13,6 +13,15 @@ describe Game do
     it 'make a turn in the board' do
       expect(game.turn(3, 'X')).to eql("\nYou have selected position 3. Now your move is displayed on the board.\n")
     end
+
+    it 'make a wrong move in the board' do
+      expect(game.turn(10, 'X')).to eql("error! Please select any number from 1 to 9\n")
+    end
+
+    it 'make a movement in a space already assigned' do
+      game.turn(9, 'O')
+      expect(game.turn(9, 'X')).to eql("error! That position is already taken\n")
+    end
   end
 
   describe '#change_turn' do
