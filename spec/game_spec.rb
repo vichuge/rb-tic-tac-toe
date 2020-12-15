@@ -22,7 +22,7 @@ describe Game do
   end
 
   describe '#print_winner' do
-    it 'Show the winner or draw according the game' do
+    it 'Show the winner X' do
       game.turn(1, 'X')
       game.turn(2, 'O')
       game.turn(4, 'X')
@@ -32,7 +32,7 @@ describe Game do
       expect(game.print_winner).to eql('Congrats, the winner is X')
     end
 
-    it 'Show the winner or draw according the game' do
+    it 'Show the winner O' do
       game.turn(5, 'X')
       game.turn(2, 'O')
       game.turn(4, 'X')
@@ -55,6 +55,12 @@ describe Game do
       game.turn(4, 'X')
       game.win
       expect(game.print_winner).to eql("It's a draw!")
+    end
+
+    it "Negative scenario when we don't have a winner or a draws statement" do
+      game.turn(5, 'X')
+      game.win
+      expect(game.print_winner).to eql('Congrats, the winner is ')
     end
   end
 
@@ -94,7 +100,7 @@ describe Game do
       expect(game.win).to eql('draw')
     end
 
-    it "return nil if the game don't continue" do
+    it "return nil if the game doesn't have finished" do
       game.turn(5, 'X')
       game.win
       expect(game.win).to eql(nil)
