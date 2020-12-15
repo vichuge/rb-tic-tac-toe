@@ -59,6 +59,11 @@ The player who makes a straight line with 3 marks wins!
 - Twitter: [@Turo_83](https://twitter.com/Turo_83)
 - LinkedIn: [Carlos Alvarez](https://www.linkedin.com/in/carlosalvarezveroy/)
 
+👤 **Miguel Ricaño**
+
+- Github: [@mricanho](https://github.com/mricanho)
+- Linkedin: [Miguel Ricaño](https://www.linkedin.com/in/mricanho/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
